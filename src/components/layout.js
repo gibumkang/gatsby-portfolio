@@ -1,15 +1,14 @@
 import React from "react"
-import styled from "@emotion/styled"
-
-const Container = styled.div`
-	margin: 0rem 5rem;
-`
+import styled, { ThemeProvider } from "styled-components"
+import Theme from "../themes/theme"
+import GlobalStyle from "../global/global.js"
 
 const Layout = ({ children }) => {
 	return (
-		<Container>
+		<ThemeProvider theme={Theme}>
+			<GlobalStyle />
 			<main>{children}</main>
-		</Container>
+		</ThemeProvider>
 	)
 }
 
