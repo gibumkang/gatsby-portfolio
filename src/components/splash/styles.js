@@ -21,6 +21,8 @@ export const Intro = styled.p`
 	max-width: 60rem;
 `
 
+export const IntroHeader = styled.h1``
+
 export const Navigation = styled.ul`
 	padding: 0;
 `
@@ -33,7 +35,7 @@ export const NavItem = styled.li`
 
 export const ScrollArrow = styled(motion.div)`
 	position: absolute;
-	bottom: 1rem;
+	bottom: 2rem;
 	left: 50%;
 	font-size: 2.5rem;
 `

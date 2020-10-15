@@ -1,6 +1,7 @@
 export default {
 	fonts: {
-		main: "Work Sans",
+		main: "Quicksand",
+		header: "Helvetica",
 	},
 	padding: "2.5rem",
 }

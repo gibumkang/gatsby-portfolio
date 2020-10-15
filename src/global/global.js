@@ -13,22 +13,23 @@ const GlobalStyle = createGlobalStyle`
 
     h1, h2, h3, h4, h5 {
         margin: 0;
+        font-family: ${props => props.theme.fonts.header}
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 5rem;
     }
 
     h2 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
     h3 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     h4 {
-        font-size: 5rem;
+        font-size: 2.75rem;
     }
 
     ul {

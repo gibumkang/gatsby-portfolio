@@ -13,5 +13,6 @@ export const Portfolio = styled.div`
 
 export const PortfolioContainer = styled.div`
     padding: 0 rem ${props => props.theme.padding};
+    font-size: 2.25rem;
     width: 60rem;
 `
