@@ -6,7 +6,6 @@ import {
 import {
 	Button,
 } from '../buttons';
-import {Link} from 'gatsby';
 
 const portfolio = () => {
 	return (
@@ -16,9 +15,7 @@ const portfolio = () => {
 				libero cupiditate natus, debitis necessitatibus perspiciatis illum
 				similique minima doloribus voluptatibus quam non dolorem sed modi
 				nisi pariatur itaque. Quaerat, autem.
-				<Button>
-					<Link to="/">Hello World!</Link>
-				</Button>
+				<Button to="/">Hello!</Button>
 			</PortfolioContainer>
 		</Portfolio>
 	)

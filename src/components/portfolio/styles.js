@@ -14,5 +14,4 @@ export const Portfolio = styled.div`
 export const PortfolioContainer = styled.div`
     padding: 0 rem ${props => props.theme.padding};
     width: 60rem;
-    color: red;
 `
