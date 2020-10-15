@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsy Portfolio
+  Gatsby Portfolio
 </h1>
 
 This project is built with Gatsby along with styled-components, framer-motion, and strapi. It does not use any scss and relies on Gatsby's GlobalStyles for global styling, styled-components for component specific styling that will usually reside in the same directory as the component itself. Lastly, framer is utilized in unison with styled-components for anything that demands animation.
