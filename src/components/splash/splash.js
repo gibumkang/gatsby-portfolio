@@ -1,7 +1,7 @@
-import React from "react"
-import { CgArrowDown } from "react-icons/cg"
+import React, { useEffect, useState } from "react";
+import { CgArrowDown } from "react-icons/cg";
 import {
-	Splash,
+	SplashPage,
 	SplashContainer,
 	Logo,
 	Intro,
@@ -9,29 +9,28 @@ import {
 	NavItem,
 	IntroHeader,
 	ScrollArrow,
-} from "./styles"
-import { Controller, Scene } from 'react-scrollmagic';
+} from "./styles";
 
-const splash = ({ props }) => {
+const Splash = ({ props }) => {
+	const [showArrow, setShowArrow] = useState(true);
+	useEffect(() => {
+		window.addEventListener("scroll", () => {
+			window.scrollY > 25 ? setShowArrow(false) : setShowArrow(true);
+		});
+	});
 	return (
 		<>
-			<Splash>
-					<SplashContainer>
+			<SplashPage>
+				<SplashContainer>
 					<Logo src="https://via.placeholder.com/250x100" />
-					<Controller>
-						<Scene duration={100} indicators={true}>
-							<>
-							<IntroHeader>Welcome</IntroHeader>
-							<Intro>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Sed vel sodales ipsum. Morbi sit amet magna sed arcu
-								bibendum porta nec sit amet lacus. Quisque sed arcu
-								tempor, ullamcorper ligula non, aliquet ante.
-								Suspendisse id viverra sapien!
-							</Intro>
-							</>
-						</Scene>
-					</Controller>
+					<IntroHeader>Hello</IntroHeader>
+					<Intro>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Sed vel sodales ipsum. Morbi sit amet magna sed arcu
+						bibendum porta nec sit amet lacus. Quisque sed arcu
+						tempor, ullamcorper ligula non, aliquet ante.
+						Suspendisse id viverra sapien!
+					</Intro>
 					<Navigation>
 						<NavItem>Item 1</NavItem>
 						<NavItem>Item 2</NavItem>
@@ -39,15 +38,15 @@ const splash = ({ props }) => {
 						<NavItem>Item 4</NavItem>
 					</Navigation>
 				</SplashContainer>
-			</Splash>
-			<ScrollArrow 
-				animate={{ y: [0, 10], opacity: [0, .75] }}
-				transition={{ duration: 1, yoyo: Infinity }}
+			</SplashPage>
+			<ScrollArrow
+				animate={{ y: [0, 10], opacity: showArrow ? 0 : 1 }}
+				transition={{ duration: 1 }}
 			>
 				<CgArrowDown />
 			</ScrollArrow>
 		</>
-	)
-}
+	);
+};
 
-export default splash;
+export default Splash;
