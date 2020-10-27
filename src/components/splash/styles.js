@@ -13,7 +13,9 @@ export const SplashPage = styled.div`
 export const SplashVideo = styled.video`
 	width: 100vw;
 	height: 100vh;
-`
+	background: #999;
+	object-fit: cover;
+`;
 
 export const SplashContainer = styled.div`
 	padding: 0rem ${props => props.theme.padding};

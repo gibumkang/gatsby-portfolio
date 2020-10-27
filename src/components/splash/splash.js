@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CgArrowDown } from "react-icons/cg";
-import splash from '../../images/splash.mp4';
+import splash from "../../images/halls.mp4";
 import {
 	SplashPage,
 	SplashContainer,
@@ -18,25 +18,30 @@ const Splash = ({ props }) => {
 	const [screenSize, setScreenSize] = useState(1);
 	const [time, setTime] = useState(1);
 	useEffect(() => {
-		window.addEventListener('resize', e => {
+		//on resize
+		window.addEventListener("resize", e => {
 			const size = window.innerWidth;
 			setScreenSize(size);
 		});
+		//on mousemove
 		window.addEventListener("mousemove", e => {
 			const location = e.clientX;
 			setPositionX(location);
-		})
+		});
+		//default
 		const size = window.innerWidth;
 		setScreenSize(size);
-		setTime(Math.ceil((positionX * 50)/screenSize));
-		setInterval(() => {
-			//document.querySelector('#video').currentTime = time;
-			console.log(time);
-		}, 1000)
-	});
+		setTime(Math.ceil((positionX * 20) / screenSize));
+		const video = document.querySelector("#video");
+		video.play();
+		setTimeout(() => {
+			video.currentTime = time;
+		}, 50);
+		console.log(`time: ${time}`);
+	}, [positionX]);
 	return (
 		<>
-			<SplashVideo src={splash} id="video" />
+			<SplashVideo src={splash} id="video" muted autoplay loop />
 			{/* <SplashPage>
 				<SplashContainer>
 					<Logo src="https://via.placeholder.com/250x100" />
@@ -47,10 +52,10 @@ const Splash = ({ props }) => {
 					</IntroHeader>
 				</SplashContainer>
 			</SplashPage> */}
-			<p>{`Position: ${positionX} Screensize: ${screenSize} Window%: ${Math.ceil((positionX * 50)/screenSize)}`}</p>
-			<ScrollArrow
-				transition={{ duration: 1 }}
-			>
+			<p>{`Position: ${positionX} Screensize: ${screenSize} Window%: ${Math.ceil(
+				(positionX * 20) / screenSize
+			)}`}</p>
+			<ScrollArrow transition={{ duration: 1 }}>
 				<CgArrowDown />
 			</ScrollArrow>
 		</>
