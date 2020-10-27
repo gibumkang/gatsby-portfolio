@@ -23,20 +23,11 @@ const Splash = ({ props }) => {
 			<SplashPage>
 				<SplashContainer>
 					<Logo src="https://via.placeholder.com/250x100" />
-					<IntroHeader>Hello</IntroHeader>
-					<Intro>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Sed vel sodales ipsum. Morbi sit amet magna sed arcu
-						bibendum porta nec sit amet lacus. Quisque sed arcu
-						tempor, ullamcorper ligula non, aliquet ante.
-						Suspendisse id viverra sapien!
-					</Intro>
-					<Navigation>
-						<NavItem>Item 1</NavItem>
-						<NavItem>Item 2</NavItem>
-						<NavItem>Item 3</NavItem>
-						<NavItem>Item 4</NavItem>
-					</Navigation>
+					<IntroHeader>
+					Hello, my name is Benjamin Kang and I am a UX/UI Developer.
+					I create interactive web experiences in Sketch &amp; HTML/CSS/JS.
+					This is a JAMstack website built on Gatsby, React, and Strapi.
+					</IntroHeader>
 				</SplashContainer>
 			</SplashPage>
 			<ScrollArrow
