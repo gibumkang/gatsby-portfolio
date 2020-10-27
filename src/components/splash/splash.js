@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CgArrowDown } from "react-icons/cg";
+import splash from '../../images/splash.mp4';
 import {
 	SplashPage,
 	SplashContainer,
@@ -9,18 +10,34 @@ import {
 	NavItem,
 	IntroHeader,
 	ScrollArrow,
+	SplashVideo,
 } from "./styles";
 
 const Splash = ({ props }) => {
-	const [showArrow, setShowArrow] = useState(true);
+	const [positionX, setPositionX] = useState(1);
+	const [screenSize, setScreenSize] = useState(1);
+	const [time, setTime] = useState(1);
 	useEffect(() => {
-		window.addEventListener("scroll", () => {
-			window.scrollY > 25 ? setShowArrow(false) : setShowArrow(true);
+		window.addEventListener('resize', e => {
+			const size = window.innerWidth;
+			setScreenSize(size);
 		});
+		window.addEventListener("mousemove", e => {
+			const location = e.clientX;
+			setPositionX(location);
+		})
+		const size = window.innerWidth;
+		setScreenSize(size);
+		setTime(Math.ceil((positionX * 50)/screenSize));
+		setInterval(() => {
+			//document.querySelector('#video').currentTime = time;
+			console.log(time);
+		}, 1000)
 	});
 	return (
 		<>
-			<SplashPage>
+			<SplashVideo src={splash} id="video" />
+			{/* <SplashPage>
 				<SplashContainer>
 					<Logo src="https://via.placeholder.com/250x100" />
 					<IntroHeader>
@@ -29,9 +46,9 @@ const Splash = ({ props }) => {
 					This is a JAMstack website built on Gatsby, React, and Strapi.
 					</IntroHeader>
 				</SplashContainer>
-			</SplashPage>
+			</SplashPage> */}
+			<p>{`Position: ${positionX} Screensize: ${screenSize} Window%: ${Math.ceil((positionX * 50)/screenSize)}`}</p>
 			<ScrollArrow
-				animate={{ y: [0, 10], opacity: showArrow ? 0 : 1 }}
 				transition={{ duration: 1 }}
 			>
 				<CgArrowDown />

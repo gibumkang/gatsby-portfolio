@@ -10,6 +10,11 @@ export const SplashPage = styled.div`
 	justify-content: center;
 `;
 
+export const SplashVideo = styled.video`
+	width: 100vw;
+	height: 100vh;
+`
+
 export const SplashContainer = styled.div`
 	padding: 0rem ${props => props.theme.padding};
 `;
