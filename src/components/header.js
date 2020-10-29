@@ -1,5 +1,4 @@
 import React from "react";
-import '../images/menu.svg';
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from "gatsby"
 import { motion } from 'framer-motion';
@@ -16,7 +15,7 @@ const Header = () => {
 	`)
 
 	return (
-		<Menu> Hi {data.siteTitle}</Menu>
+		<Menu>{data.site.siteMetadata.title}</Menu>
 	)
 }
 

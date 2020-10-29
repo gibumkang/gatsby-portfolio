@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../components/seo"
-import Splash from "../components/Splash"
-import Layout from "../components/Layout"
+import Splash from "../components/splash"
+import Layout from "../layouts/"
 import "../styles/global.scss"
 
 const IndexPage = () => {

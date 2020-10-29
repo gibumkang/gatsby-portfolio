@@ -7,7 +7,21 @@ module.exports = {
 	plugins: [
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-sass`,
+		{
+			resolve: `gatsby-plugin-layout`,
+			options: {
+				component: require.resolve(`./src/layouts/index.js`)
+			}
+		},
 		`gatsby-plugin-styled-components`,
+		{
+			resolve: "gatsby-plugin-react-svg",
+			options: {
+			  rule: {
+				include: /assets/ // See below to configure properly
+			  }
+			}
+		},
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {

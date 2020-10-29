@@ -18,6 +18,9 @@ const parentVariant = {
 			delayChildren: .25,
 			staggerChildren: .5,
 		}
+	},
+	exit: {
+		y: -500,
 	}
 }
 
@@ -39,6 +42,7 @@ const childVariant = {
 		opacity: 1,
 		transition: {
 			duration: .5,
+			ease: 'easeInOut',
 		}
 	}
 }
@@ -76,6 +80,7 @@ const Splash = ({ props }) => {
 					variants={parentVariant}
 					initial="initial"
 					animate="animate"
+					exit="exit"
 				>
 					<IntroHeader>
 						My name is Benjamin Kang and I am a UX/UI Developer.
