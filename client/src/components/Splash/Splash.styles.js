@@ -53,14 +53,14 @@ export const Animation = styled.div`
 	border: 0.1rem solid teal;
 	border-radius: 50%;
 	position: absolute;
-	bottom: 30rem;
+	bottom: -20rem;
 	right: 2rem;
 	z-index: 1;
 	@media screen and (max-width: 60rem) {
-		position: relative;
+		position: static;
 		display: block;
 		bottom: 5rem;
-		margin: 0 auto;
+		margin: 3rem auto;
 	}
 `;
 
@@ -72,10 +72,25 @@ export const Navigation = styled(motion.ul)`
 		font-size: 3rem;
 		font-weight: bold;
 		font-family: ${props => props.theme.fonts.header};
+		@media screen and (max-width: 60rem) {
+			margin: 2rem auto;
+			text-align: center;
+			display: block;
+		}
 	}
 `;
 
-export const Header = styled(motion.h1)``;
+export const Header = styled(motion.h1)`
+	text-align: left;
+	@media screen and (max-width: 60rem) {
+		text-align: center;
+	}
+`;
 export const Paragraph = styled(motion.p)`
 	line-height: 3.5rem;
+	max-width: 70rem;
+	text-align: left;
+	@media screen and (max-width: 60rem) {
+		text-align: center;
+	}
 `;

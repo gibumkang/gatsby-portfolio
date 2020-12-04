@@ -8,29 +8,22 @@ import * as GS from '../styles/styles';
 import Portfolio from '../components/Portfolio';
 
 const IndexPage = () => {
-	const [hideLogo, setHideLogo] = useState(false);
-	useEffect(() => {
-		!hideLogo &&
-			setTimeout(() => {
-				setHideLogo(true);
-			}, 3000);
-	}, [hideLogo]);
+	// const [hideLogo, setHideLogo] = useState(false);
+	// useEffect(() => {
+	// 	!hideLogo &&
+	// 		setTimeout(() => {
+	// 			setHideLogo(true);
+	// 		}, 2000);
+	// }, [hideLogo]);
 
 	return (
 		<Layout>
 			<SEO title="Home" />
-			{!hideLogo && (
-				<GS.IntroLogo>
-					<Logo />
-				</GS.IntroLogo>
-			)}
-			{hideLogo && (
-				<>
-					<Splash />
-					<Portfolio />
-					<Footer />
-				</>
-			)}
+			<GS.IntroLogo>
+				<Logo />
+			</GS.IntroLogo>
+			<Splash />
+			<Portfolio />
 		</Layout>
 	);
 };

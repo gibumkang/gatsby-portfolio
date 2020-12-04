@@ -4,11 +4,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { motion } from 'framer-motion';
 
 const Menu = styled(motion.div)`
-	color: #fff;
-	font-size: 5rem;
-	position: absolute;
-	right: 2rem;
-	top: 2rem;
+	color: #001;
+	font-size: 2rem;
 `;
 
 const Header = () => {
