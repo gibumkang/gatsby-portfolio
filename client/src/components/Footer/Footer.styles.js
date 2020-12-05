@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export const footerVariants = {
 	initial: {
@@ -7,9 +7,17 @@ export const footerVariants = {
 	},
 	animate: {
 		y: 0,
+		transition: {
+			type: 'spring',
+			stiffness: 100,
+			damping: 20,
+		},
 	},
 	exit: {
 		y: 100,
+		transition: {
+			duration: 1,
+		},
 	},
 };
 

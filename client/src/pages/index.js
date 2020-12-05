@@ -3,6 +3,7 @@ import SEO from '../components/seo';
 import Splash from '../components/Splash';
 import Layout from '../layouts/';
 import Footer from '../components/Footer';
+import Blog from '../components/Blog';
 import Logo from '../assets/benjaminkang-2.svg';
 import * as GS from '../styles/styles';
 import Portfolio from '../components/Portfolio';
@@ -24,6 +25,8 @@ const IndexPage = () => {
 			</GS.IntroLogo>
 			<Splash />
 			<Portfolio />
+			<Blog />
+			<Footer />
 		</Layout>
 	);
 };

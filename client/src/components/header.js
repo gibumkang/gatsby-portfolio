@@ -19,6 +19,8 @@ const Header = () => {
 		}
 	`);
 
+	//{data.site.siteMetadata.title}
+
 	return <Menu>{data.site.siteMetadata.title}</Menu>;
 };
 

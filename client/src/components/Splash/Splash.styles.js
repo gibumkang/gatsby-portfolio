@@ -53,8 +53,8 @@ export const Animation = styled.div`
 	border: 0.1rem solid teal;
 	border-radius: 50%;
 	position: absolute;
-	bottom: -20rem;
-	right: 2rem;
+	bottom: -17rem;
+	right: 6rem;
 	z-index: 1;
 	@media screen and (max-width: 60rem) {
 		position: static;

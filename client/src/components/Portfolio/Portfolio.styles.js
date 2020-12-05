@@ -40,7 +40,7 @@ export const Grid = styled.div`
 
 export const Full = styled(motion.div)`
 	grid-area: 1 / 1 / 1 / 7;
-	background: blue;
+	background: #ccc;
 `;
 
 export const LeftHalf = styled(motion.div)`
